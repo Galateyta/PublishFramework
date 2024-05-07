@@ -1,0 +1,4 @@
+framework module KTAKinegramEmrtdConnector {
+  header "KTAKinegramEmrtdConnector-Swift.h"
+  requires objc
+}
