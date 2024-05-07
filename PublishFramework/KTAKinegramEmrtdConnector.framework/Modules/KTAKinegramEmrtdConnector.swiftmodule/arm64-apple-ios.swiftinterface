@@ -1,0 +1,206 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KTAKinegramEmrtdConnector
+import CoreNFC
+import Foundation
+import Swift
+import _Concurrency
+public protocol EmrtdConnectorDelegate : AnyObject {
+  func shouldRequestEmrtdPassport() -> Swift.Bool
+  func emrtdConnector(_ emrtdConnector: KTAKinegramEmrtdConnector.EmrtdConnector, didUpdateStatus status: KTAKinegramEmrtdConnector.EmrtdConnector.Status)
+  func emrtdConnector(_ emrtdConnector: KTAKinegramEmrtdConnector.EmrtdConnector, didReceiveEmrtdPassport emrtdPassport: KTAKinegramEmrtdConnector.EmrtdPassport?)
+  func emrtdConnector(_ emrtdConnector: KTAKinegramEmrtdConnector.EmrtdConnector, didCloseWithCloseCode closeCode: Swift.Int, reason: KTAKinegramEmrtdConnector.EmrtdConnector.CloseReason?)
+}
+@available(iOS 13.0, *)
+public class EmrtdConnector {
+  public init?(clientId: Swift.String, webSocketUrl url: Swift.String, delegate: KTAKinegramEmrtdConnector.EmrtdConnectorDelegate)
+  public func connect(to passportTag: CoreNFC.NFCISO7816Tag, vId: Swift.String, documentNumber: Swift.String, dateOfBirth: Swift.String, dateOfExpiry: Swift.String)
+  public func connect(to passportTag: CoreNFC.NFCISO7816Tag, vId: Swift.String, can: Swift.String)
+  public func isOpen() -> Swift.Bool
+  @objc deinit
+}
+extension KTAKinegramEmrtdConnector.EmrtdConnector {
+  public enum CloseReason : Swift.CustomStringConvertible {
+    case timeoutWhileWaitingForResponse
+    case timeoutWhileWaitingForStartMessage
+    case maxSessionTimeExceeded
+    case unexpectedMessage
+    case invalidStartMessage
+    case accessControlFailed
+    case communicationFailed(Swift.Error?)
+    case fileReadError
+    case emrtdPassportReaderError
+    case serverError
+    case postToResultServerFailed
+    case invalidClientId
+    case invalidAccessKeyValues
+    case nfcChipCommunicationFailed(Swift.Error?)
+    case other(reasonPhrase: Swift.String?)
+    public var description: Swift.String {
+      get
+    }
+  }
+}
+extension KTAKinegramEmrtdConnector.EmrtdConnector {
+  public enum Status : Swift.CustomStringConvertible {
+    case readAtrInfo
+    case connectingToServer
+    case accessControl
+    case readSOD
+    case readDG14
+    case chipAuthentication
+    case readDG15
+    case activeAuthentication
+    case readDG1
+    case readDG2
+    case readDG7
+    case readDG11
+    case readDG12
+    case passiveAuthentication
+    case done
+    case other(value: Swift.String)
+    public var description: Swift.String {
+      get
+    }
+  }
+}
+public struct EmrtdPassport : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+  public let sodInfo: KTAKinegramEmrtdConnector.EmrtdPassport.SODInfo?
+  public let mrzInfo: KTAKinegramEmrtdConnector.EmrtdPassport.MRZInfo?
+  public let facePhoto: Foundation.Data?
+  public let signaturePhotos: [Foundation.Data]?
+  public let additionalPersonalDetails: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalPersonalDetails?
+  public let additionalDocumentDetails: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalDocumentDetails?
+  public let passiveAuthentication: Swift.Bool
+  public let passiveAuthenticationDetails: KTAKinegramEmrtdConnector.EmrtdPassport.PassiveAuthenticationDetails?
+  public let chipAuthenticationResult: KTAKinegramEmrtdConnector.EmrtdPassport.CheckResult
+  public let activeAuthenticationResult: KTAKinegramEmrtdConnector.EmrtdPassport.CheckResult
+  public let errors: [Swift.String]
+  public let filesBinary: [Swift.String : Foundation.Data]?
+  public var description: Swift.String {
+    get
+  }
+  public struct SODInfo : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    public let hashAlgorithm: Swift.String
+    public let hashForDataGroup: [Swift.Int : Swift.String]
+    public var description: Swift.String {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport.SODInfo, b: KTAKinegramEmrtdConnector.EmrtdPassport.SODInfo) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct MRZInfo : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    public let documentType: Swift.String
+    public let documentCode: Swift.String
+    public let issuingState: Swift.String
+    public let primaryIdentifier: Swift.String
+    public let secondaryIdentifier: [Swift.String]
+    public let nationality: Swift.String
+    public let documentNumber: Swift.String
+    public let dateOfBirth: Swift.String
+    public let dateOfExpiry: Swift.String
+    public let gender: Swift.String
+    public let optionalData1: Swift.String
+    public let optionalData2: Swift.String?
+    public var description: Swift.String {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport.MRZInfo, b: KTAKinegramEmrtdConnector.EmrtdPassport.MRZInfo) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct AdditionalPersonalDetails : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    public let fullNameOfHolder: Swift.String?
+    public let otherNames: [Swift.String]?
+    public let personalNumber: Swift.String?
+    public let fullDateOfBirth: Swift.String?
+    public let placeOfBirth: Swift.String?
+    public let permanentAddress: [Swift.String]?
+    public let telephone: Swift.String?
+    public let profession: Swift.String?
+    public let title: Swift.String?
+    public let personalSummary: Swift.String?
+    public let proofOfCitizenshipImage: Foundation.Data?
+    public let otherValidTravelDocumentNumbers: [Swift.String]?
+    public let custodyInformation: Swift.String?
+    public var description: Swift.String {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalPersonalDetails, b: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalPersonalDetails) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct AdditionalDocumentDetails : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    public let issuingAuthority: Swift.String?
+    public let dateOfIssue: Swift.String?
+    public let namesOfOtherPersons: Swift.String?
+    public let endorsementsAndObservations: Swift.String?
+    public let taxOrExitRequirements: Swift.String?
+    public let imageOfFront: Foundation.Data?
+    public let imageOfRear: Foundation.Data?
+    public let dateAndTimeOfPersonalization: Swift.String?
+    public let personalizationSystemSerialNumber: Swift.String?
+    public var description: Swift.String {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalDocumentDetails, b: KTAKinegramEmrtdConnector.EmrtdPassport.AdditionalDocumentDetails) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct PassiveAuthenticationDetails : Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    public let sodSignatureValid: Swift.Bool?
+    public let documentCertificateValid: Swift.Bool?
+    public let dataGroupsChecked: [Swift.Int]?
+    public let dataGroupsWithValidHash: [Swift.Int]?
+    public let allHashesValid: Swift.Bool?
+    public let error: Swift.String?
+    public var description: Swift.String {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport.PassiveAuthenticationDetails, b: KTAKinegramEmrtdConnector.EmrtdPassport.PassiveAuthenticationDetails) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public enum CheckResult : Swift.String, Swift.Codable, Swift.Hashable, Swift.CustomStringConvertible {
+    case success
+    case failed
+    case unavailable
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: KTAKinegramEmrtdConnector.EmrtdPassport, b: KTAKinegramEmrtdConnector.EmrtdPassport) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+extension KTAKinegramEmrtdConnector.EmrtdPassport.CheckResult : Swift.RawRepresentable {}
