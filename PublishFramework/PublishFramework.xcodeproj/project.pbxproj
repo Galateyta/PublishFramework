@@ -8,27 +8,85 @@
 
 /* Begin PBXBuildFile section */
 		110D0F272BE3DEE30069A344 /* PublishFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 110D0F262BE3DEE30069A344 /* PublishFramework.docc */; };
-		110D0F2D2BE3DEE30069A344 /* PublishFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110D0F222BE3DEE30069A344 /* PublishFramework.framework */; };
 		110D0F332BE3DEE30069A344 /* PublishFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 110D0F252BE3DEE30069A344 /* PublishFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		110D0F3D2BE3DF2E0069A344 /* PublishFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 110D0F3C2BE3DF2E0069A344 /* PublishFramework.m */; };
+		1139DC4D2BEA6F16006ED4A9 /* nfc_reader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */; };
+		1139DC4E2BEA6F16006ED4A9 /* nfc_reader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */; };
+		1139DC582BEA6F2A006ED4A9 /* NfcReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC572BEA6F2A006ED4A9 /* NfcReader.m */; };
+		1139DC592BEA6F2A006ED4A9 /* nfc_config.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */; };
+		1139DC5A2BEA6F2A006ED4A9 /* OvdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */; };
+		1139DC652BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1139DC642BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		110D0F2E2BE3DEE30069A344 /* PBXContainerItemProxy */ = {
+		1139DC5B2BEA6F66006ED4A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 110D0F192BE3DEE30069A344 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 110D0F212BE3DEE30069A344;
-			remoteInfo = PublishFramework;
+			remoteGlobalIDString = 1139DC2C2BEA6ED5006ED4A9;
+			remoteInfo = configuration;
+		};
+		1139DC5D2BEA6F6A006ED4A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 110D0F192BE3DEE30069A344 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1139DC482BEA6F16006ED4A9;
+			remoteInfo = nfc_reader;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1139DC2B2BEA6ED5006ED4A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1139DC472BEA6F16006ED4A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				1139DC4E2BEA6F16006ED4A9 /* nfc_reader.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		110D0F222BE3DEE30069A344 /* PublishFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublishFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		110D0F252BE3DEE30069A344 /* PublishFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishFramework.h; sourceTree = "<group>"; };
 		110D0F262BE3DEE30069A344 /* PublishFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PublishFramework.docc; sourceTree = "<group>"; };
-		110D0F2C2BE3DEE30069A344 /* PublishFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublishFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		110D0F3C2BE3DF2E0069A344 /* PublishFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishFramework.m; sourceTree = "<group>"; };
+		1139DC2D2BEA6ED5006ED4A9 /* libconfiguration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libconfiguration.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1139DC372BEA6EF2006ED4A9 /* configuration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = configuration.cpp; sourceTree = "<group>"; };
+		1139DC382BEA6EF2006ED4A9 /* configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configuration.h; sourceTree = "<group>"; };
+		1139DC392BEA6EF2006ED4A9 /* ConfigurationParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationParser.h; sourceTree = "<group>"; };
+		1139DC3A2BEA6EF2006ED4A9 /* ConfigurationParserXml.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigurationParserXml.cpp; sourceTree = "<group>"; };
+		1139DC3B2BEA6EF2006ED4A9 /* ConfigurationParserXml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationParserXml.h; sourceTree = "<group>"; };
+		1139DC3C2BEA6EF2006ED4A9 /* LicenseChecker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LicenseChecker.cpp; sourceTree = "<group>"; };
+		1139DC3D2BEA6EF2006ED4A9 /* LicenseChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseChecker.h; sourceTree = "<group>"; };
+		1139DC3E2BEA6EF2006ED4A9 /* LicensePrivateKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicensePrivateKey.h; sourceTree = "<group>"; };
+		1139DC3F2BEA6EF2006ED4A9 /* LicensePrivateKey.h.footer */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePrivateKey.h.footer; sourceTree = "<group>"; };
+		1139DC402BEA6EF2006ED4A9 /* LicensePrivateKey.h.header */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePrivateKey.h.header; sourceTree = "<group>"; };
+		1139DC412BEA6EF2006ED4A9 /* LicensePublicKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicensePublicKey.h; sourceTree = "<group>"; };
+		1139DC422BEA6EF2006ED4A9 /* LicensePublicKey.h.footer */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePublicKey.h.footer; sourceTree = "<group>"; };
+		1139DC432BEA6EF2006ED4A9 /* LicensePublicKey.h.header */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePublicKey.h.header; sourceTree = "<group>"; };
+		1139DC442BEA6EF2006ED4A9 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		1139DC492BEA6F16006ED4A9 /* libnfc_reader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnfc_reader.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nfc_reader.h; sourceTree = "<group>"; };
+		1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nfc_reader.m; sourceTree = "<group>"; };
+		1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = nfc_config.mm; sourceTree = "<group>"; };
+		1139DC532BEA6F2A006ED4A9 /* nfc_reader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nfc_reader-Bridging-Header.h"; sourceTree = "<group>"; };
+		1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvdWrapper.swift; sourceTree = "<group>"; };
+		1139DC552BEA6F2A006ED4A9 /* NfcReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NfcReader.h; sourceTree = "<group>"; };
+		1139DC562BEA6F2A006ED4A9 /* nfc_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nfc_config.h; sourceTree = "<group>"; };
+		1139DC572BEA6F2A006ED4A9 /* NfcReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NfcReader.m; sourceTree = "<group>"; };
+		1139DC642BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KTAKinegramEmrtdConnector.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,11 +97,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		110D0F292BE3DEE30069A344 /* Frameworks */ = {
+		1139DC2A2BEA6ED5006ED4A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				110D0F2D2BE3DEE30069A344 /* PublishFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1139DC462BEA6F16006ED4A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1139DC652BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				110D0F242BE3DEE30069A344 /* PublishFramework */,
+				1139DC2E2BEA6ED6006ED4A9 /* configuration */,
+				1139DC4A2BEA6F16006ED4A9 /* nfc_reader */,
 				110D0F232BE3DEE30069A344 /* Products */,
+				1139DC5F2BEA703A006ED4A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,7 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				110D0F222BE3DEE30069A344 /* PublishFramework.framework */,
-				110D0F2C2BE3DEE30069A344 /* PublishFrameworkTests.xctest */,
+				1139DC2D2BEA6ED5006ED4A9 /* libconfiguration.a */,
+				1139DC492BEA6F16006ED4A9 /* libnfc_reader.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +144,58 @@
 				110D0F262BE3DEE30069A344 /* PublishFramework.docc */,
 			);
 			path = PublishFramework;
+			sourceTree = "<group>";
+		};
+		1139DC2E2BEA6ED6006ED4A9 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1139DC362BEA6EF2006ED4A9 /* native */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		1139DC362BEA6EF2006ED4A9 /* native */ = {
+			isa = PBXGroup;
+			children = (
+				1139DC372BEA6EF2006ED4A9 /* configuration.cpp */,
+				1139DC382BEA6EF2006ED4A9 /* configuration.h */,
+				1139DC392BEA6EF2006ED4A9 /* ConfigurationParser.h */,
+				1139DC3A2BEA6EF2006ED4A9 /* ConfigurationParserXml.cpp */,
+				1139DC3B2BEA6EF2006ED4A9 /* ConfigurationParserXml.h */,
+				1139DC3C2BEA6EF2006ED4A9 /* LicenseChecker.cpp */,
+				1139DC3D2BEA6EF2006ED4A9 /* LicenseChecker.h */,
+				1139DC3E2BEA6EF2006ED4A9 /* LicensePrivateKey.h */,
+				1139DC3F2BEA6EF2006ED4A9 /* LicensePrivateKey.h.footer */,
+				1139DC402BEA6EF2006ED4A9 /* LicensePrivateKey.h.header */,
+				1139DC412BEA6EF2006ED4A9 /* LicensePublicKey.h */,
+				1139DC422BEA6EF2006ED4A9 /* LicensePublicKey.h.footer */,
+				1139DC432BEA6EF2006ED4A9 /* LicensePublicKey.h.header */,
+				1139DC442BEA6EF2006ED4A9 /* Setting.h */,
+			);
+			path = native;
+			sourceTree = "<group>";
+		};
+		1139DC4A2BEA6F16006ED4A9 /* nfc_reader */ = {
+			isa = PBXGroup;
+			children = (
+				1139DC562BEA6F2A006ED4A9 /* nfc_config.h */,
+				1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */,
+				1139DC532BEA6F2A006ED4A9 /* nfc_reader-Bridging-Header.h */,
+				1139DC552BEA6F2A006ED4A9 /* NfcReader.h */,
+				1139DC572BEA6F2A006ED4A9 /* NfcReader.m */,
+				1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */,
+				1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */,
+				1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */,
+			);
+			path = nfc_reader;
+			sourceTree = "<group>";
+		};
+		1139DC5F2BEA703A006ED4A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1139DC642BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,29 +224,47 @@
 			buildRules = (
 			);
 			dependencies = (
+				1139DC5E2BEA6F6A006ED4A9 /* PBXTargetDependency */,
+				1139DC5C2BEA6F66006ED4A9 /* PBXTargetDependency */,
 			);
 			name = PublishFramework;
 			productName = PublishFramework;
 			productReference = 110D0F222BE3DEE30069A344 /* PublishFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		110D0F2B2BE3DEE30069A344 /* PublishFrameworkTests */ = {
+		1139DC2C2BEA6ED5006ED4A9 /* configuration */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 110D0F392BE3DEE30069A344 /* Build configuration list for PBXNativeTarget "PublishFrameworkTests" */;
+			buildConfigurationList = 1139DC332BEA6ED6006ED4A9 /* Build configuration list for PBXNativeTarget "configuration" */;
 			buildPhases = (
-				110D0F282BE3DEE30069A344 /* Sources */,
-				110D0F292BE3DEE30069A344 /* Frameworks */,
-				110D0F2A2BE3DEE30069A344 /* Resources */,
+				1139DC292BEA6ED5006ED4A9 /* Sources */,
+				1139DC2A2BEA6ED5006ED4A9 /* Frameworks */,
+				1139DC2B2BEA6ED5006ED4A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				110D0F2F2BE3DEE30069A344 /* PBXTargetDependency */,
 			);
-			name = PublishFrameworkTests;
-			productName = PublishFrameworkTests;
-			productReference = 110D0F2C2BE3DEE30069A344 /* PublishFrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = configuration;
+			productName = configuration;
+			productReference = 1139DC2D2BEA6ED5006ED4A9 /* libconfiguration.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1139DC482BEA6F16006ED4A9 /* nfc_reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1139DC4F2BEA6F16006ED4A9 /* Build configuration list for PBXNativeTarget "nfc_reader" */;
+			buildPhases = (
+				1139DC452BEA6F16006ED4A9 /* Sources */,
+				1139DC462BEA6F16006ED4A9 /* Frameworks */,
+				1139DC472BEA6F16006ED4A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nfc_reader;
+			productName = nfc_reader;
+			productReference = 1139DC492BEA6F16006ED4A9 /* libnfc_reader.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -139,7 +278,10 @@
 					110D0F212BE3DEE30069A344 = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					110D0F2B2BE3DEE30069A344 = {
+					1139DC2C2BEA6ED5006ED4A9 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					1139DC482BEA6F16006ED4A9 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -158,20 +300,14 @@
 			projectRoot = "";
 			targets = (
 				110D0F212BE3DEE30069A344 /* PublishFramework */,
-				110D0F2B2BE3DEE30069A344 /* PublishFrameworkTests */,
+				1139DC2C2BEA6ED5006ED4A9 /* configuration */,
+				1139DC482BEA6F16006ED4A9 /* nfc_reader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		110D0F202BE3DEE30069A344 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		110D0F2A2BE3DEE30069A344 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,20 +326,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		110D0F282BE3DEE30069A344 /* Sources */ = {
+		1139DC292BEA6ED5006ED4A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1139DC452BEA6F16006ED4A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1139DC582BEA6F2A006ED4A9 /* NfcReader.m in Sources */,
+				1139DC5A2BEA6F2A006ED4A9 /* OvdWrapper.swift in Sources */,
+				1139DC592BEA6F2A006ED4A9 /* nfc_config.mm in Sources */,
+				1139DC4D2BEA6F16006ED4A9 /* nfc_reader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		110D0F2F2BE3DEE30069A344 /* PBXTargetDependency */ = {
+		1139DC5C2BEA6F66006ED4A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 110D0F212BE3DEE30069A344 /* PublishFramework */;
-			targetProxy = 110D0F2E2BE3DEE30069A344 /* PBXContainerItemProxy */;
+			target = 1139DC2C2BEA6ED5006ED4A9 /* configuration */;
+			targetProxy = 1139DC5B2BEA6F66006ED4A9 /* PBXContainerItemProxy */;
+		};
+		1139DC5E2BEA6F6A006ED4A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1139DC482BEA6F16006ED4A9 /* nfc_reader */;
+			targetProxy = 1139DC5D2BEA6F6A006ED4A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -267,6 +419,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -324,6 +477,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -341,9 +495,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,9 +530,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,32 +554,58 @@
 			};
 			name = Release;
 		};
-		110D0F3A2BE3DEE30069A344 /* Debug */ = {
+		1139DC342BEA6ED6006ED4A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U226N9252P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PublishFrameworkTests;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		110D0F3B2BE3DEE30069A344 /* Release */ = {
+		1139DC352BEA6ED6006ED4A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U226N9252P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PublishFrameworkTests;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1139DC502BEA6F16006ED4A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U226N9252P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1139DC512BEA6F16006ED4A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U226N9252P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -441,11 +631,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		110D0F392BE3DEE30069A344 /* Build configuration list for PBXNativeTarget "PublishFrameworkTests" */ = {
+		1139DC332BEA6ED6006ED4A9 /* Build configuration list for PBXNativeTarget "configuration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				110D0F3A2BE3DEE30069A344 /* Debug */,
-				110D0F3B2BE3DEE30069A344 /* Release */,
+				1139DC342BEA6ED6006ED4A9 /* Debug */,
+				1139DC352BEA6ED6006ED4A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1139DC4F2BEA6F16006ED4A9 /* Build configuration list for PBXNativeTarget "nfc_reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1139DC502BEA6F16006ED4A9 /* Debug */,
+				1139DC512BEA6F16006ED4A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

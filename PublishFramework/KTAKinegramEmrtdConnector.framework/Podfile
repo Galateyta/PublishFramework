@@ -1,0 +1,32 @@
+# private podspecs
+source 'https://git.kurzdigital.com/kta/kta-podspecs.git'
+
+# public podspecs
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '14.0'
+
+def shared_pods
+   pod 'SwiftLint'
+end
+
+target 'DevelopmentApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for DevelopmentApp
+  shared_pods
+end
+
+target 'kta_kinegram_emrtd_connector' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for kds_sdk_template
+  shared_pods
+
+  target 'kta_kinegram_emrtd_connectorTests' do
+    # Pods for testing
+  end
+
+end
