@@ -10,12 +10,9 @@
 		110D0F272BE3DEE30069A344 /* PublishFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 110D0F262BE3DEE30069A344 /* PublishFramework.docc */; };
 		110D0F332BE3DEE30069A344 /* PublishFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 110D0F252BE3DEE30069A344 /* PublishFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		110D0F3D2BE3DF2E0069A344 /* PublishFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 110D0F3C2BE3DF2E0069A344 /* PublishFramework.m */; };
-		1139DC4D2BEA6F16006ED4A9 /* nfc_reader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */; };
-		1139DC4E2BEA6F16006ED4A9 /* nfc_reader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */; };
-		1139DC582BEA6F2A006ED4A9 /* NfcReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC572BEA6F2A006ED4A9 /* NfcReader.m */; };
-		1139DC592BEA6F2A006ED4A9 /* nfc_config.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */; };
-		1139DC5A2BEA6F2A006ED4A9 /* OvdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */; };
 		1139DC652BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1139DC642BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework */; platformFilter = ios; };
+		11FA91C42BF50AA9000A4632 /* configuration in Resources */ = {isa = PBXBuildFile; fileRef = 11FA91C22BF50AA9000A4632 /* configuration */; };
+		11FA91C52BF50AA9000A4632 /* nfc_reader in Resources */ = {isa = PBXBuildFile; fileRef = 11FA91C32BF50AA9000A4632 /* nfc_reader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +48,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				1139DC4E2BEA6F16006ED4A9 /* nfc_reader.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,30 +59,10 @@
 		110D0F262BE3DEE30069A344 /* PublishFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PublishFramework.docc; sourceTree = "<group>"; };
 		110D0F3C2BE3DF2E0069A344 /* PublishFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishFramework.m; sourceTree = "<group>"; };
 		1139DC2D2BEA6ED5006ED4A9 /* libconfiguration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libconfiguration.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1139DC372BEA6EF2006ED4A9 /* configuration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = configuration.cpp; sourceTree = "<group>"; };
-		1139DC382BEA6EF2006ED4A9 /* configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configuration.h; sourceTree = "<group>"; };
-		1139DC392BEA6EF2006ED4A9 /* ConfigurationParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationParser.h; sourceTree = "<group>"; };
-		1139DC3A2BEA6EF2006ED4A9 /* ConfigurationParserXml.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigurationParserXml.cpp; sourceTree = "<group>"; };
-		1139DC3B2BEA6EF2006ED4A9 /* ConfigurationParserXml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationParserXml.h; sourceTree = "<group>"; };
-		1139DC3C2BEA6EF2006ED4A9 /* LicenseChecker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LicenseChecker.cpp; sourceTree = "<group>"; };
-		1139DC3D2BEA6EF2006ED4A9 /* LicenseChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseChecker.h; sourceTree = "<group>"; };
-		1139DC3E2BEA6EF2006ED4A9 /* LicensePrivateKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicensePrivateKey.h; sourceTree = "<group>"; };
-		1139DC3F2BEA6EF2006ED4A9 /* LicensePrivateKey.h.footer */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePrivateKey.h.footer; sourceTree = "<group>"; };
-		1139DC402BEA6EF2006ED4A9 /* LicensePrivateKey.h.header */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePrivateKey.h.header; sourceTree = "<group>"; };
-		1139DC412BEA6EF2006ED4A9 /* LicensePublicKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicensePublicKey.h; sourceTree = "<group>"; };
-		1139DC422BEA6EF2006ED4A9 /* LicensePublicKey.h.footer */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePublicKey.h.footer; sourceTree = "<group>"; };
-		1139DC432BEA6EF2006ED4A9 /* LicensePublicKey.h.header */ = {isa = PBXFileReference; lastKnownFileType = text; path = LicensePublicKey.h.header; sourceTree = "<group>"; };
-		1139DC442BEA6EF2006ED4A9 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		1139DC492BEA6F16006ED4A9 /* libnfc_reader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnfc_reader.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nfc_reader.h; sourceTree = "<group>"; };
-		1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nfc_reader.m; sourceTree = "<group>"; };
-		1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = nfc_config.mm; sourceTree = "<group>"; };
-		1139DC532BEA6F2A006ED4A9 /* nfc_reader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nfc_reader-Bridging-Header.h"; sourceTree = "<group>"; };
-		1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvdWrapper.swift; sourceTree = "<group>"; };
-		1139DC552BEA6F2A006ED4A9 /* NfcReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NfcReader.h; sourceTree = "<group>"; };
-		1139DC562BEA6F2A006ED4A9 /* nfc_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nfc_config.h; sourceTree = "<group>"; };
-		1139DC572BEA6F2A006ED4A9 /* NfcReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NfcReader.m; sourceTree = "<group>"; };
 		1139DC642BEA712A006ED4A9 /* KTAKinegramEmrtdConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KTAKinegramEmrtdConnector.framework; sourceTree = "<group>"; };
+		11FA91C22BF50AA9000A4632 /* configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = configuration; sourceTree = "<group>"; };
+		11FA91C32BF50AA9000A4632 /* nfc_reader */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nfc_reader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				110D0F242BE3DEE30069A344 /* PublishFramework */,
-				1139DC2E2BEA6ED6006ED4A9 /* configuration */,
-				1139DC4A2BEA6F16006ED4A9 /* nfc_reader */,
 				110D0F232BE3DEE30069A344 /* Products */,
 				1139DC5F2BEA703A006ED4A9 /* Frameworks */,
 			);
@@ -139,55 +113,13 @@
 		110D0F242BE3DEE30069A344 /* PublishFramework */ = {
 			isa = PBXGroup;
 			children = (
+				11FA91C22BF50AA9000A4632 /* configuration */,
+				11FA91C32BF50AA9000A4632 /* nfc_reader */,
 				110D0F252BE3DEE30069A344 /* PublishFramework.h */,
 				110D0F3C2BE3DF2E0069A344 /* PublishFramework.m */,
 				110D0F262BE3DEE30069A344 /* PublishFramework.docc */,
 			);
 			path = PublishFramework;
-			sourceTree = "<group>";
-		};
-		1139DC2E2BEA6ED6006ED4A9 /* configuration */ = {
-			isa = PBXGroup;
-			children = (
-				1139DC362BEA6EF2006ED4A9 /* native */,
-			);
-			path = configuration;
-			sourceTree = "<group>";
-		};
-		1139DC362BEA6EF2006ED4A9 /* native */ = {
-			isa = PBXGroup;
-			children = (
-				1139DC372BEA6EF2006ED4A9 /* configuration.cpp */,
-				1139DC382BEA6EF2006ED4A9 /* configuration.h */,
-				1139DC392BEA6EF2006ED4A9 /* ConfigurationParser.h */,
-				1139DC3A2BEA6EF2006ED4A9 /* ConfigurationParserXml.cpp */,
-				1139DC3B2BEA6EF2006ED4A9 /* ConfigurationParserXml.h */,
-				1139DC3C2BEA6EF2006ED4A9 /* LicenseChecker.cpp */,
-				1139DC3D2BEA6EF2006ED4A9 /* LicenseChecker.h */,
-				1139DC3E2BEA6EF2006ED4A9 /* LicensePrivateKey.h */,
-				1139DC3F2BEA6EF2006ED4A9 /* LicensePrivateKey.h.footer */,
-				1139DC402BEA6EF2006ED4A9 /* LicensePrivateKey.h.header */,
-				1139DC412BEA6EF2006ED4A9 /* LicensePublicKey.h */,
-				1139DC422BEA6EF2006ED4A9 /* LicensePublicKey.h.footer */,
-				1139DC432BEA6EF2006ED4A9 /* LicensePublicKey.h.header */,
-				1139DC442BEA6EF2006ED4A9 /* Setting.h */,
-			);
-			path = native;
-			sourceTree = "<group>";
-		};
-		1139DC4A2BEA6F16006ED4A9 /* nfc_reader */ = {
-			isa = PBXGroup;
-			children = (
-				1139DC562BEA6F2A006ED4A9 /* nfc_config.h */,
-				1139DC522BEA6F2A006ED4A9 /* nfc_config.mm */,
-				1139DC532BEA6F2A006ED4A9 /* nfc_reader-Bridging-Header.h */,
-				1139DC552BEA6F2A006ED4A9 /* NfcReader.h */,
-				1139DC572BEA6F2A006ED4A9 /* NfcReader.m */,
-				1139DC542BEA6F2A006ED4A9 /* OvdWrapper.swift */,
-				1139DC4B2BEA6F16006ED4A9 /* nfc_reader.h */,
-				1139DC4C2BEA6F16006ED4A9 /* nfc_reader.m */,
-			);
-			path = nfc_reader;
 			sourceTree = "<group>";
 		};
 		1139DC5F2BEA703A006ED4A9 /* Frameworks */ = {
@@ -311,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FA91C42BF50AA9000A4632 /* configuration in Resources */,
+				11FA91C52BF50AA9000A4632 /* nfc_reader in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1139DC582BEA6F2A006ED4A9 /* NfcReader.m in Sources */,
-				1139DC5A2BEA6F2A006ED4A9 /* OvdWrapper.swift in Sources */,
-				1139DC592BEA6F2A006ED4A9 /* nfc_config.mm in Sources */,
-				1139DC4D2BEA6F16006ED4A9 /* nfc_reader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

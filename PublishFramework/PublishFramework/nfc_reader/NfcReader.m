@@ -5,7 +5,7 @@
 #import "NfcReader.h"
 //#import "enums.h"
 #import "nfc_config.h"
-#import "nfc_reader-Swift.h"
+#import "./nfc_reader"
 
 @implementation NfcReader
 
