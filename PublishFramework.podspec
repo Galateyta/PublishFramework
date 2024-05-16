@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PublishFramework"
-  spec.version      = "1.0.7"
+  spec.version      = "1.0.8"
   spec.summary      = "The PublishFramework is example."
 
   # This description is used to generate tags and improve search results.
@@ -88,7 +88,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  spec.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'PublishFramework/PublishFramework/nfc_reader/nfc_reader-Bridging-Header.h' } 
+ # spec.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'PublishFramework/PublishFramework/nfc_reader/nfc_reader-Bridging-Header.h' } 
   spec.source_files  = "PublishFramework/PublishFramework/**/*.{h,m}"
   spec.source_files  = "PublishFramework/PublishFramework/**/*.swift"
   #spec.exclude_files = "Classes/Exclude"
