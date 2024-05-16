@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PublishFramework"
-  spec.version      = "1.0.9"
+  spec.version      = "1.0.10"
   spec.summary      = "The PublishFramework is example."
 
   # This description is used to generate tags and improve search results.
@@ -93,6 +93,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "PublishFramework/PublishFramework/**/*.swift"
   spec.frameworks = 'KTAKinegramEmrtdConnector'
   spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => 'PublishFramework' }
+  spec.vendored_frameworks = 'PublishFramework/KTAKinegramEmrtdConnector.framework'
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
