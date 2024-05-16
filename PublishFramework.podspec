@@ -88,6 +88,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  spec.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'PublishFramework/PublishFramework/nfc_reader/nfc_reader-Bridging-Header.h' } 
   spec.source_files  = "PublishFramework/PublishFramework/**/*.{h,m}"
 
   #spec.exclude_files = "Classes/Exclude"
