@@ -543,6 +543,7 @@
 		1139DC342BEA6ED6006ED4A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U226N9252P;
 				OTHER_LDFLAGS = "-ObjC";
@@ -559,6 +560,7 @@
 		1139DC352BEA6ED6006ED4A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U226N9252P;
 				OTHER_LDFLAGS = "-ObjC";
@@ -575,6 +577,7 @@
 		1139DC502BEA6F16006ED4A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U226N9252P;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -592,6 +595,7 @@
 		1139DC512BEA6F16006ED4A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U226N9252P;
 				FRAMEWORK_SEARCH_PATHS = (
