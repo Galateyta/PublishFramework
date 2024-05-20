@@ -66,7 +66,7 @@ Pod::Spec.new do |spec|
    spec.platform     = :ios, "13.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+   spec.ios.deployment_target = "13.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -88,15 +88,17 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
- # spec.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'PublishFramework/PublishFramework/nfc_reader/nfc_reader-Bridging-Header.h' } 
-  spec.source_files  = "PublishFramework/PublishFramework/**/*.{h,m}"
-  spec.source_files  = "PublishFramework/PublishFramework/**/*.swift"
+  spec.source_files = "PublishFramework/PublishFramework/**/*.{h,m,swift}"
+  spec.source_files = "PublishFramework/KTAKinegramEmrtdConnector.framework/Headers/*.h"
   spec.frameworks = 'KTAKinegramEmrtdConnector'
-  spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '/Volumes/Encrypted/sdk/pxl_sdk_deps/emrtd/0.0.8/ios', 'VALID_ARCHS' => ['arm64'] }
+  spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => 'PublishFramework'}
   spec.vendored_frameworks = 'PublishFramework/KTAKinegramEmrtdConnector.framework'
-  #spec.exclude_files = "Classes/Exclude"
+  spec.header_mappings_dir = 'PublishFramework/KTAKinegramEmrtdConnector.framework/Headers/'
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphone*]' => 'x86_64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphone*]' => 'x86_64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
-  spec.public_header_files = "PublishFramework/PublishFramework/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
