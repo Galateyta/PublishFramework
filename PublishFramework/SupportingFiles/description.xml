@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<skin>
+    <brand>PXL_TESTING</brand>
+    <appId>ch.pxlvision.pxlbeamonboard</appId>
+    <appName>PXLBeamOnBoard</appName>
+    <!--
+    Enumeration of functionality
+    QRCode Scanning     = 1,
+    ID Scanning         = 2,
+    Doc Scanning        = 3,
+    PDF Signing         = 4,
+    Selfie              = 5,
+    Face Verification   = 6,
+    Video Call          = 7,
+    NFC Reading         = 8,
+    (Deprecated and removed) ID Security Scan    = 9,
+    Liveness Check      = 10,
+    Document Recording  = 11
+    -->
+    <functionalityList>1,2,3,5,8,11</functionalityList>
+    <functionalityListWeb>2,6,10</functionalityListWeb>
+    <xmlnsName>urn:document.scan.ep.PXLBeamOnBoard.net</xmlnsName>
+    <sdkExpiration/>
+    <functionalityTracking>on</functionalityTracking>
+    <monitoringUrl>https://k8s-monitoring-dev.pxl-vision.com/</monitoringUrl>
+    <functionalityTrackingToFile>off</functionalityTrackingToFile>
+    <extendIdExpiration>off</extendIdExpiration>
+    <nfcServerEnabled>on</nfcServerEnabled>
+    <savePath>/lib/.moduleconfig/onboard_uploads</savePath>
+    <pubKeyPath>/lib/.moduleconfig/public_rsa_pxl</pubKeyPath>
+    <nfcLicenceValidation>on</nfcLicenceValidation>
+</skin>

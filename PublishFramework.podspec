@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.license      = "MIT"
-  spec.license      = { :type => "MIT", :file => "license.sig, license.txt" }
+  #spec.license      = { :type => "MIT", :file => "license.sig, license.txt" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -115,7 +115,7 @@ Pod::Spec.new do |spec|
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
 
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  spec.preserve_paths = ['PublishFramework/SupportingFiles/**/*']
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
