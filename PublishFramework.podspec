@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PublishFramework"
-  spec.version      = "1.0.21"
+  spec.version      = "1.0.22"
   spec.summary      = "The PublishFramework is example."
 
   # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.license      = "MIT"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "license.sig, license.txt" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
